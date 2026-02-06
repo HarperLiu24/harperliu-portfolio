@@ -82,7 +82,7 @@
     /* hero */
     header.hero{
       margin-top:18px;
-      padding:26px;
+      padding:22px; /* less padding for cleaner look */
       border:1px solid var(--line);
       border-radius: var(--radius);
       background: rgba(255,255,255,.70);
@@ -121,19 +121,9 @@
       color: var(--muted);
       font-size:16px;
       line-height:1.75;
-      max-width: 70ch;
+      max-width: 68ch;
     }
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .metaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.82);
-      font-size:13px; color: var(--muted);
-    }
-    .chip b{color: var(--text); font-weight:800}
-    .miniDot{width:7px; height:7px; border-radius:999px; background: var(--brand); box-shadow: 0 0 0 5px rgba(59,130,246,.12)}
 
     /* photo */
     .avatarCard{
@@ -152,9 +142,6 @@
       object-fit: cover;
       border:1px solid rgba(15,23,42,.10);
       background: linear-gradient(135deg, rgba(59,130,246,.10), rgba(168,85,247,.08));
-    }
-    .avatarNote{
-      font-size:12px; color: var(--muted); text-align:center; line-height:1.6;
     }
     .badgeRow{display:flex; gap:8px; flex-wrap:wrap; justify-content:center}
     .badge{
@@ -182,7 +169,7 @@
     .grid{
       display:grid;
       grid-template-columns: repeat(12, 1fr);
-      gap:14px;
+      gap:18px; /* more whitespace */
       margin-top:14px;
     }
     .card{
@@ -205,8 +192,6 @@
       font-weight:700;
     }
     .span6{grid-column: span 6}
-    .span7{grid-column: span 7}
-    .span5{grid-column: span 5}
     .span12{grid-column: span 12}
 
     .timeline{display:grid; gap:10px; margin-top:14px}
@@ -240,7 +225,7 @@
       .heroGrid{grid-template-columns: 1fr}
       .avatar{width:140px; height:140px}
       h1{font-size:32px}
-      .span6,.span7,.span5{grid-column: span 12}
+      .span6{grid-column: span 12}
     }
     html{scroll-behavior:smooth}
   </style>
@@ -275,9 +260,10 @@
 
           <h1>劉芸蓁 Harper<br/>產品客服／技術支援 × UIUX／前端學習者</h1>
 
+          <!-- shorter subtitle for cleaner look -->
           <p class="subtitle">
-            我擅長從使用者情境出發釐清問題、回報追蹤並跨部門協作推進改善。
-            同時持續自學 HTML／CSS 與版型實作，將學習成果與作品整理於此，讓企業看見我的成長速度與落地能力。
+            產品客服／技術支援經驗，擅長釐清使用情境、問題排除與跨部門協作。
+            持續自學 UI／前端，把學習成果與作品整理在這裡。
           </p>
 
           <div class="ctaRow">
@@ -285,24 +271,16 @@
             <a class="btn" href="#learning">看學習軌跡</a>
             <a class="btn" href="#contact">取得聯絡方式</a>
           </div>
-
-          <div class="metaRow">
-            <span class="chip"><span class="miniDot"></span><b>專長</b> 需求釐清 / 問題分析 / 回報追蹤</span>
-            <span class="chip"><span class="miniDot"></span><b>協作</b> 與工程、產品、業務對齊資訊</span>
-            <span class="chip"><span class="miniDot"></span><b>學習</b> HTML / CSS / GitHub Pages</span>
-          </div>
         </div>
 
         <aside class="avatarCard" aria-label="Profile">
-          <!-- 把你的照片上傳到 repo 根目錄，命名為 profile.jpg，這裡就會顯示 -->
+          <!-- ✅ 照片建議：把照片上傳到 repo 根目錄並命名為 profile.jpg -->
+          <!-- 如果你的照片在 assets 內，改成 src="assets/profile.jpg" -->
           <img class="avatar" src="profile.jpg" alt="劉芸蓁 Harper 大頭照" />
           <div class="badgeRow">
             <span class="badge">Tech Support</span>
             <span class="badge purple">UX Thinking</span>
             <span class="badge green">Front-end</span>
-          </div>
-          <div class="avatarNote">
-            若照片未顯示：請確認 repo 有上傳 <b>profile.jpg</b>（同層級），或把檔名改成一致。
           </div>
         </aside>
       </div>
@@ -338,43 +316,41 @@
 
     <section id="projects">
       <h2>作品集</h2>
-      <p class="hint">作品不求多，但每個作品都呈現：目標 → 做法 → 收穫 → 下一步。</p>
+      <p class="hint">每個作品用「一句話」說清楚，再提供 Demo / GitHub 連結即可。</p>
 
+      <!-- ✅ Clean, simple project cards -->
       <div class="grid">
-        <div class="card span7">
-          <h3>個人作品網站（本頁）｜Portfolio</h3>
-          <p>
-            <b>目標：</b>建立一個能同時呈現「產品客服/技術支援」與「UI/前端學習成果」的展示平台。<br/>
-            <b>內容：</b>一頁式資訊架構、清楚分區、可持續擴充作品與學習紀錄。<br/>
-            <b>收穫：</b>完成從內容規劃 → 撰寫 → GitHub Pages 部署的完整流程。
-          </p>
+        <div class="card span6">
+          <h3>作品 01｜個人作品網站（本頁）</h3>
+          <p>一頁式整理技術支援亮點與學習成果，完成 GitHub Pages 部署與更新流程。</p>
           <div class="tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
             <span class="tag">GitHub Pages</span>
-            <span class="tag">Content</span>
           </div>
+          <p style="margin-top:12px">
+            <a class="btn primary" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </p>
         </div>
 
-        <div class="card span5">
-          <h3>HTML / CSS 練習集｜UI 基礎</h3>
-          <p>
-            <b>目標：</b>累積切版與版型能力，建立可重複使用的 UI 元件（卡片、表單、列表）。<br/>
-            <b>下一步：</b>加入 RWD 與可用性優化，整理成案例文章。
-          </p>
+        <div class="card span6">
+          <h3>作品 02｜HTML/CSS 切版練習集</h3>
+          <p>累積版型、表單與卡片元件練習，逐步加入 RWD 與可用性優化。</p>
           <div class="tags">
             <span class="tag">Layout</span>
             <span class="tag">RWD</span>
-            <span class="tag">Form UI</span>
+            <span class="tag">UI Components</span>
           </div>
+          <p style="margin-top:12px">
+            <a class="btn primary" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </p>
         </div>
 
         <div class="card span12">
-          <h3>Support × UX 小改版提案（規劃中）</h3>
-          <p>
-            以第一線支援經驗整理「常見卡點」，用流程/文案/介面三個角度提出改善方案，
-            並用 Prototype 或靜態頁呈現「改善前後對照」。
-          </p>
+          <h3>作品 03｜Support × UX 小改版提案（規劃中）</h3>
+          <p>整理常見卡點，提出流程／文案／介面改善，並用簡單 Prototype 呈現改善前後對照。</p>
           <div class="tags">
             <span class="tag">User Pain Points</span>
             <span class="tag">Information Design</span>
@@ -404,15 +380,6 @@
             <li>支援知識整理：FAQ / 操作指引 / 常見問題範本</li>
           </ul>
         </div>
-      </div>
-
-      <div class="tags">
-        <span class="tag">需求釐清</span>
-        <span class="tag">Bug Report</span>
-        <span class="tag">客戶導入</span>
-        <span class="tag">跨部門溝通</span>
-        <span class="tag">功能測試</span>
-        <span class="tag">文件整理</span>
       </div>
     </section>
 
@@ -466,7 +433,6 @@
           <h3>我正在找的方向</h3>
           <p>
             以<strong>產品客服／技術支援</strong>為主軸加入團隊，並持續以 UI/前端實作思維協助提升使用者體驗與支援效率。
-            若團隊有跨職能合作（Support × Product/UX/Engineering）的文化，我會非常期待參與。
           </p>
         </div>
       </div>
