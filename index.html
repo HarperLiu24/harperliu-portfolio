@@ -132,3 +132,302 @@
     section{
       margin-top:18px;
       padding:22px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.04);
+    }
+    section h2{
+      margin:0 0 10px;
+      font-size:18px; letter-spacing:.3px;
+    }
+    .hint{color:var(--muted); font-size:14px; margin:6px 0 0; line-height:1.7}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.16);
+      border-radius: 16px;
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); line-height:1.7; font-size:14px}
+    .span6{grid-column: span 6}
+    .span7{grid-column: span 7}
+    .span5{grid-column: span 5}
+    .span12{grid-column: span 12}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.8; font-size:14px}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .tag{
+      font-size:12px; color:rgba(255,255,255,.75);
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+
+    .timeline{display:grid; gap:10px; margin-top:14px}
+    .titem{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px; border:1px solid var(--line);
+      border-radius:14px; background:rgba(0,0,0,.14);
+    }
+    .ticon{
+      width:34px; height:34px; border-radius:12px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.14));
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+      flex: 0 0 auto;
+    }
+    .titem b{display:block; margin-top:1px}
+    .titem .small{color:var(--muted); font-size:13px; line-height:1.6}
+
+    footer{
+      margin-top:18px;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+      text-align:center;
+      padding:18px 0 0;
+    }
+
+    /* responsive */
+    @media (max-width: 840px){
+      h1{font-size:32px}
+      .span6,.span7,.span5{grid-column: span 12}
+      .navlinks{display:none}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto}
+    }
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="dot"></span>
+        <span>Harper｜Portfolio</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#about">關於我</a>
+        <a href="#projects">作品集</a>
+        <a href="#experience">經歷亮點</a>
+        <a href="#learning">學習軌跡</a>
+        <a href="#contact">聯絡方式</a>
+      </div>
+
+      <a class="btn primary" href="#contact">聯絡我</a>
+    </div>
+
+    <header id="top" class="hero">
+      <div class="heroTop">
+        <div>
+          <div class="kicker">
+            <span class="pill">主軸：產品客服／技術支援</span>
+            <span>UIUX／前端持續累積中</span>
+          </div>
+          <h1>劉芸蓁 Harper<br/>產品客服／技術支援 × UIUX／前端學習者</h1>
+          <p class="subtitle">
+            我擅長從使用者情境出發釐清問題、回報追蹤並跨部門協作推進改善。
+            同時持續自學 HTML／CSS 與版型實作，將學習成果與作品整理於此，讓企業看見我的成長速度與落地能力。
+          </p>
+
+          <div class="ctaRow">
+            <!-- TODO: 你可以把 #projects/#contact 換成實際連結 -->
+            <a class="btn primary" href="#projects">看作品</a>
+            <a class="btn" href="#learning">看學習軌跡</a>
+            <!-- 如果你有履歷PDF，可上傳到repo後把 href 改成檔名，例如 href="resume.pdf" -->
+            <a class="btn" href="#contact">取得聯絡方式</a>
+          </div>
+
+          <div class="metaRow">
+            <span class="chip"><span class="miniDot"></span><b>專長</b> 需求釐清 / 問題分析 / 回報追蹤</span>
+            <span class="chip"><span class="miniDot"></span><b>協作</b> 與工程、產品、業務對齊資訊</span>
+            <span class="chip"><span class="miniDot"></span><b>學習</b> HTML / CSS / 靜態網站部署</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>關於我</h2>
+      <p class="hint">
+        我在第一線支援中累積了「把模糊描述變成可行動資訊」的能力：先還原使用情境 → 建立假設 → 測試驗證 → 回報追蹤。
+        這也讓我更重視操作流程與使用體驗，因此開始投入 UI/前端基礎實作，把常見卡點轉為更清楚的資訊與更直覺的介面呈現。
+      </p>
+
+      <div class="grid">
+        <div class="card span6">
+          <h3>我能帶給團隊的價值</h3>
+          <ul class="list">
+            <li>快速釐清使用者情境與問題邊界，降低來回溝通成本</li>
+            <li>以可重現步驟/預期行為/實際結果整理回報，提升處理效率</li>
+            <li>把回饋轉成可改善的清單：文件、流程、介面或教育訓練</li>
+          </ul>
+        </div>
+
+        <div class="card span6">
+          <h3>我正在加速的能力</h3>
+          <ul class="list">
+            <li>HTML / CSS：版型、排版、RWD</li>
+            <li>作品整理：把「做了什麼」寫成「為什麼做、怎麼做、學到什麼」</li>
+            <li>Support × UX：用支援經驗提出流程/文案/介面改善</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>作品集</h2>
+      <p class="hint">
+        作品不求多，但每個作品都會呈現：目標 → 做法 → 收穫 → 下一步。你之後只要照這個格式新增卡片即可。
+      </p>
+
+      <div class="grid">
+        <div class="card span7">
+          <h3>個人作品網站（本頁）｜Portfolio</h3>
+          <p>
+            <b>目標：</b>建立一個能同時呈現「產品客服/技術支援」與「UI/前端學習成果」的公開展示平台。<br/>
+            <b>內容：</b>一頁式資訊架構、清楚分區、可持續擴充作品與學習紀錄。<br/>
+            <b>收穫：</b>完成從內容規劃→撰寫→GitHub Pages 部署的完整流程。
+          </p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">Content Structure</span>
+          </div>
+        </div>
+
+        <div class="card span5">
+          <h3>HTML / CSS 練習集｜UI 基礎</h3>
+          <p>
+            <b>目標：</b>累積切版與版型能力，建立可重複使用的 UI 元件（卡片、表單、列表）。<br/>
+            <b>下一步：</b>加入 RWD 與可用性優化，並整理成案例文章。
+          </p>
+          <div class="tags">
+            <span class="tag">Layout</span>
+            <span class="tag">RWD</span>
+            <span class="tag">Form UI</span>
+          </div>
+        </div>
+
+        <div class="card span12">
+          <h3>Support × UX 小改版提案（規劃中）</h3>
+          <p>
+            以第一線支援經驗整理「常見卡點」，用流程/文案/介面三個角度提出改善方案，並用簡單 Prototype 或靜態頁呈現「改善前後對照」。
+            <br/><span style="color:rgba(255,255,255,.72)">（你未來想轉 UIUX 或前端，這個會是非常有說服力的作品類型）</span>
+          </p>
+          <div class="tags">
+            <span class="tag">User Pain Points</span>
+            <span class="tag">Information Design</span>
+            <span class="tag">Prototype</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>經歷亮點</h2>
+      <div class="grid">
+        <div class="card span6">
+          <h3>產品客服 / 技術支援</h3>
+          <ul class="list">
+            <li>使用情境釐清、問題分析、回報與追蹤（重現步驟/預期/實際/環境）</li>
+            <li>客戶導入與教學：協助使用者建立正確操作流程</li>
+            <li>跨部門協作：與工程/產品/業務對齊資訊與優先順序</li>
+          </ul>
+        </div>
+
+        <div class="card span6">
+          <h3>測試與工具</h3>
+          <ul class="list">
+            <li>功能測試與驗證：Web / App（依實際經驗補充）</li>
+            <li>文件與協作：Notion / Trello / Google Workspace</li>
+            <li>支援知識整理：FAQ / 操作指引 / 常見問題範本</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">需求釐清</span>
+        <span class="tag">Bug Report</span>
+        <span class="tag">客戶導入</span>
+        <span class="tag">跨部門溝通</span>
+        <span class="tag">功能測試</span>
+        <span class="tag">文件整理</span>
+      </div>
+    </section>
+
+    <section id="learning">
+      <h2>學習軌跡</h2>
+      <p class="hint">用「可驗證的輸出」展示學習力。你可以每完成一件事就新增一筆。</p>
+
+      <div class="timeline">
+        <div class="titem">
+          <div class="ticon">✓</div>
+          <div>
+            <b>完成作品網站上線（GitHub Pages）</b>
+            <div class="small">建立內容架構、整理經驗亮點、完成部署與更新流程。</div>
+          </div>
+        </div>
+
+        <div class="titem">
+          <div class="ticon">✦</div>
+          <div>
+            <b>HTML / CSS 切版練習（持續）</b>
+            <div class="small">表單、卡片、列表、RWD；把練習整理成可展示的案例。</div>
+          </div>
+        </div>
+
+        <div class="titem">
+          <div class="ticon">↗</div>
+          <div>
+            <b>Support × UX：把常見卡點轉為改善方案</b>
+            <div class="small">從回饋中萃取痛點 → 提出流程/文案/介面優化 → 用 Prototype 或靜態頁呈現。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡方式</h2>
+      <p class="hint">把下方連結換成你的真實資訊（Email / LinkedIn / 104 / GitHub）。</p>
+
+      <div class="grid">
+        <div class="card span6">
+          <h3>聯絡我</h3>
+          <ul class="list">
+            <li>Email：<a href="mailto:yourname@email.com">yourname@email.com</a></li>
+            <li>LinkedIn：<a href="#" target="_blank" rel="noreferrer">（貼上你的 LinkedIn 連結）</a></li>
+            <li>104：<a href="#" target="_blank" rel="noreferrer">（貼上你的 104 履歷/作品連結）</a></li>
+            <li>GitHub：<a href="https://github.com/HarperLiu24" target="_blank" rel="noreferrer">github.com/HarperLiu24</a></li>
+          </ul>
+        </div>
+
+        <div class="card span6">
+          <h3>我正在找的方向</h3>
+          <p>
+            以<strong>產品客服／技術支援</strong>為主軸加入團隊，並持續以 UI/前端實作思維協助提升使用者體驗與支援效率。
+            若團隊有跨職能合作（Support × Product/UX/Engineering）的文化，我會非常期待參與。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Harper Liu · Built with plain HTML/CSS · Hosted on GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
